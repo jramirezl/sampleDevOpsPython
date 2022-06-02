@@ -6,7 +6,7 @@
 - pip3 install <lib_name>
 - pip3 freeze > requirements.txt // transportar dependiencias
 
-####Flask
+#### Flask
 
 add env variables: 
 - export FLASK_APP=application.py 
