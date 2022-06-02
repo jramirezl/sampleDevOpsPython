@@ -16,6 +16,6 @@ add env variables:
 ### Docker
 docker
 
-- docker build -t <account_docker_registry>/<image_name>:<version> .
-- docker run -it --rm -p 5000:5000 --name <docker_container_name> <account_docker_registry>/<image_name>:<version>
+- docker build -t <account_docker_registry>/<image_name>:< version > .
+- docker run -it --rm -p 5000:5000 --name <docker_container_name> <account_docker_registry>/<image_name>:< version >
     
