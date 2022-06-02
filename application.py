@@ -1,4 +1,5 @@
-from flask import Flask, request
+from flask import Flask
+import requests
 
 app = Flask(__name__)
 
@@ -10,9 +11,9 @@ def home():
 
 @app.route('/barrios', methods=['GET'])
 def get_barrios():
-    barrios = {"barrios": [{"nombre": "Belen", "ubicacion": "occidente"},
-                           {"nombre": "America", "ubicacion": "Sur Occidente"}]}
-    return barrios
+    url = 'https://6285638196bccbf32d622180.mockapi.io/api/v1/barrios'
+    response = requests.get (url, {}, timeout=5 )
+    return  {"barrios": response.json() }
 
 
 @app.route('/barrios', methods=['POST'])
