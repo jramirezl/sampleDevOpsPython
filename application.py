@@ -20,3 +20,8 @@ def get_barrios():
 def add_barrios():
     barrios = {"barrios": [{"nombre": request.json['nombre'], "ubicacion": request.json['ubicacion']}]}
     return barrios
+
+
+
+if __name__ == '__main__':
+    app.run()
