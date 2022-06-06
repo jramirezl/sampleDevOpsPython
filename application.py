@@ -1,5 +1,6 @@
 from flask import Flask
 import requests
+import os
 
 app = Flask(__name__)
 
@@ -20,3 +21,7 @@ def get_barrios():
 def add_barrios():
     barrios = {"barrios": [{"nombre": request.json['nombre'], "ubicacion": request.json['ubicacion']}]}
     return barrios
+
+
+port = int(os.environ.get("PORT", 5000)) # <-----
+app.run(host='0.0.0.0', port=port)       # <-----
