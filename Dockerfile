@@ -7,5 +7,5 @@ ENV FLASK_APP /usr/src/app/sample2/application.py
 ENV FLASK_ENV production
 ENV PORT $PORT
 
-CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0 --port=$PORT"]
 
