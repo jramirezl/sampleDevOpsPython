@@ -23,7 +23,7 @@ def add_barrios():
     return barrios
 
 
-port = os.environment.get("PORT", 5000)
+port = os.environ.get("PORT", 5000)
 print("get port %d" % port)
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=port)
